@@ -30,8 +30,14 @@ class OCR {
         let cgOutputImage = ciContext.createCGImage(ciOutputImage, fromRect: ciOutputImage.extent())
         let invertedImage = UIImage(CGImage: cgOutputImage, scale: 1, orientation: .Up)!
         
-        
-        self.engines = [OCREngine(image: image, boundingRect: selectionRect), OCREngine(image: invertedImage, boundingRect: selectionRect)]
+        if type == .Spotify {
+            self.engines = [OCREngine(image: image, boundingRect: selectionRect), OCREngine(image: image, boundingRect: selectionRect)]
+        } else {
+            self.engines = [OCREngine(image: image, boundingRect: selectionRect), OCREngine(image: invertedImage, boundingRect: selectionRect)]
+        }
+        for engine in self.engines {
+            engine.charBlacklist = "-\"“-'()`\n|__-\""
+        }
         
         dispatch_sync(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
             self.engines[0].recognize()

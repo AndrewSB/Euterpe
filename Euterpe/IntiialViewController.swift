@@ -11,7 +11,6 @@ import AssetsLibrary
 import Photos
 
 class InitialViewController: UIViewController {
-    var classifier: Classifier!
     let imagePicker = UIImagePickerController()
     var OCRDaemon: [OCR]?
     

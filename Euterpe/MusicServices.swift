@@ -71,7 +71,7 @@ extension Services {
         get {
             switch self {
             case .Pandora: return 0.15
-            case .Spotify: return 0.15
+            case .Spotify: return 0.14
             case .Soundcloud: return 0.18
             case .Music: return 0.18
             }
