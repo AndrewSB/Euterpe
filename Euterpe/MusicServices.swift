@@ -14,6 +14,16 @@ enum Services {
     case Soundcloud
     case Music
     
+    init(type: String) {
+        switch type {
+        case "Pandora": self = .Pandora
+        case "Spotify": self = .Spotify
+        case "Soundcloud": self = .Soundcloud
+        case "Music": self = .Music
+        default: self = .Pandora; assert(false == true, "sup bruh")
+        }
+    }
+    
     var boundingRect: CGRect {
         get {
             return CGRect(x: x, y: y, width: width, height: height)

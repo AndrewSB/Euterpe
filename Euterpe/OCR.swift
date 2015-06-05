@@ -39,10 +39,10 @@ class OCR {
         })
         dispatch_sync(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
             self.engines[1].recognize()
-            println(self.engines[0].recognizedBlocksByIteratorLevel(.Textline))
+            println(self.engines[1].recognizedBlocksByIteratorLevel(.Textline))
         })
-        
-        
+        UserStore.checkNewMatch(engines[0], type: type)
+        UserStore.checkNewMatch(engines[1], type: type)
         self.engines = nil
     }
 }

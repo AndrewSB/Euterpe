@@ -18,11 +18,12 @@ class InitialViewController: UIViewController {
     var image: UIImage! {
         didSet {
             rollImageView.image = image
+            UserStore.nuke()
             OCRDaemon = [OCR(type: .Pandora, image: image, screenSize: view.frame.size),
                          OCR(type: .Soundcloud, image: image, screenSize: view.frame.size),
                          OCR(type: .Spotify, image: image, screenSize: view.frame.size),
                          OCR(type: .Music, image: image, screenSize: view.frame.size)]
-            println("here")
+            println("decided on \(UserStore.type). Search term is \(UserStore.term) with a confidence of \(UserStore.confidence)")
         }
     }
 
@@ -38,13 +39,6 @@ class InitialViewController: UIViewController {
         
         let screenSize = self.view.frame.size
         let type = Services.Pandora
-        
-        let greenView = UIView(frame: CGRect(x: screenSize.width * type.x, y: screenSize.height * type.y,
-            width: screenSize.width * type.width, height: screenSize.height * type.height))
-        greenView.backgroundColor = UIColor.greenColor()
-        
-        view.addSubview(greenView)
-
     }
 }
 

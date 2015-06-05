@@ -24,6 +24,7 @@
 		46E3D8D51B216838001E0622 /* Classifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E3D8D41B216838001E0622 /* Classifier.swift */; };
 		46E3D8D91B21697D001E0622 /* MusicServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E3D8D81B21697D001E0622 /* MusicServices.swift */; };
 		46E3D8DB1B21970E001E0622 /* OCR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E3D8DA1B21970E001E0622 /* OCR.swift */; };
+		46E3D8DD1B21ADDF001E0622 /* NSUserdefaultStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E3D8DC1B21ADDF001E0622 /* NSUserdefaultStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		46E3D8D41B216838001E0622 /* Classifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Classifier.swift; sourceTree = "<group>"; };
 		46E3D8D81B21697D001E0622 /* MusicServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicServices.swift; sourceTree = "<group>"; };
 		46E3D8DA1B21970E001E0622 /* OCR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCR.swift; sourceTree = "<group>"; };
+		46E3D8DC1B21ADDF001E0622 /* NSUserdefaultStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSUserdefaultStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				46E3D8D11B215836001E0622 /* UIImageExtension.swift */,
+				46E3D8DC1B21ADDF001E0622 /* NSUserdefaultStore.swift */,
 				4600DEE91B2130A5002E381C /* Frameworks */,
 			);
 			name = Library;
@@ -223,6 +226,7 @@
 				46E3D8D91B21697D001E0622 /* MusicServices.swift in Sources */,
 				46E3D8D51B216838001E0622 /* Classifier.swift in Sources */,
 				4600DEC31B211FFC002E381C /* AppDelegate.swift in Sources */,
+				46E3D8DD1B21ADDF001E0622 /* NSUserdefaultStore.swift in Sources */,
 				4600DEE41B212211002E381C /* IntiialViewController.swift in Sources */,
 				46E3D8D21B215836001E0622 /* UIImageExtension.swift in Sources */,
 			);
