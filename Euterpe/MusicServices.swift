@@ -14,12 +14,9 @@ enum Services {
     case Soundcloud
     case Music
     
-    func boundingBox(service: Services) -> [CGRect]{
-        switch service {
-        case .Pandora:
-            return [CGRect()]
-        default:
-            return [CGRect()]
+    var boundingRect: CGRect {
+        get {
+            return CGRect(x: x, y: y, width: width, height: height)
         }
     }
 }
@@ -31,9 +28,9 @@ extension Services {
         get {
             switch self {
             case .Pandora: return 0.05
-            case .Spotify: return 0.03
-            case .Soundcloud: return 7
-            case .Music: return 7
+            case .Spotify: return 0.2
+            case .Soundcloud: return 0.02
+            case .Music: return 0
             }
         }
     }
@@ -42,9 +39,9 @@ extension Services {
         get {
             switch self {
             case .Pandora: return 0.67
-            case .Spotify: return 0.07
-            case .Soundcloud: return 7
-            case .Music: return 7
+            case .Spotify: return 0.58
+            case .Soundcloud: return 0.07
+            case .Music: return 0.65
             }
         }
     }
@@ -53,9 +50,9 @@ extension Services {
         get {
             switch self {
             case .Pandora: return 0.75
-            case .Spotify: return 7
-            case .Soundcloud: return 7
-            case .Music: return 7
+            case .Spotify: return 0.65
+            case .Soundcloud: return 0.92
+            case .Music: return 1
             }
         }
     }
@@ -64,9 +61,9 @@ extension Services {
         get {
             switch self {
             case .Pandora: return 0.15
-            case .Spotify: return 7
-            case .Soundcloud: return 7
-            case .Music: return 7
+            case .Spotify: return 0.15
+            case .Soundcloud: return 0.18
+            case .Music: return 0.18
             }
         }
     }

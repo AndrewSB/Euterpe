@@ -37,7 +37,7 @@ class InitialViewController: UIViewController {
         let w = self.view.frame.width
         let h = self.view.frame.height
         
-        let fwyView = UIView(frame: CGRect(x: 0.02 * w, y: 0.07 * h, width: 0.92*w, height: 0.18*h))
+        let fwyView = UIView(frame: CGRect(x: 0 * w, y: 0.65 * h, width: 1*w, height: 0.18*h))
         fwyView.backgroundColor = UIColor.redColor()
         fwyView.alpha = 0.5
         
@@ -62,7 +62,7 @@ extension InitialViewController: UINavigationControllerDelegate, UIImagePickerCo
 
             
             
-            self.image = pickedImage.colorInverted()
+            self.image = pickedImage
         }
         
         dismissViewControllerAnimated(true, completion: {
@@ -102,7 +102,7 @@ extension InitialViewController: UINavigationControllerDelegate, UIImagePickerCo
     func colorInverted(image: UIImage) -> UIImage {
         let cIImage =  CIImage(CGImage: image.CGImage)
         var invertFilter = CIFilter(name: "CIColorInvert")
-        cIImage.setValue(invertFilter, forKey: kCIInputImageKey)
+        cIImage.setValue(invertFilter, forKey: kCIOutputImageKey)
         
         let cIOutputImage = invertFilter.outputImage
         
