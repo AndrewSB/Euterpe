@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4600DEC31B211FFC002E381C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4600DEC21B211FFC002E381C /* AppDelegate.swift */; };
+		4600DEC51B211FFC002E381C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4600DEC41B211FFC002E381C /* ViewController.swift */; };
+		4600DEC81B211FFC002E381C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4600DEC61B211FFC002E381C /* Main.storyboard */; };
+		4600DECA1B211FFC002E381C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4600DEC91B211FFC002E381C /* Images.xcassets */; };
+		4600DECD1B211FFC002E381C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4600DECB1B211FFC002E381C /* LaunchScreen.xib */; };
+		4600DED91B211FFC002E381C /* EuterpeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4600DED81B211FFC002E381C /* EuterpeTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4600DED31B211FFC002E381C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4600DEB51B211FFC002E381C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4600DEBC1B211FFC002E381C;
+			remoteInfo = Euterpe;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4600DEBD1B211FFC002E381C /* Euterpe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Euterpe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4600DEC11B211FFC002E381C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4600DEC21B211FFC002E381C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4600DEC41B211FFC002E381C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4600DEC71B211FFC002E381C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4600DEC91B211FFC002E381C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4600DECC1B211FFC002E381C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		4600DED21B211FFC002E381C /* EuterpeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EuterpeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4600DED71B211FFC002E381C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4600DED81B211FFC002E381C /* EuterpeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EuterpeTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4600DEBA1B211FFC002E381C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4600DECF1B211FFC002E381C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4600DEB41B211FFC002E381C = {
+			isa = PBXGroup;
+			children = (
+				4600DEBF1B211FFC002E381C /* Euterpe */,
+				4600DED51B211FFC002E381C /* EuterpeTests */,
+				4600DEBE1B211FFC002E381C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4600DEBE1B211FFC002E381C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4600DEBD1B211FFC002E381C /* Euterpe.app */,
+				4600DED21B211FFC002E381C /* EuterpeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4600DEBF1B211FFC002E381C /* Euterpe */ = {
+			isa = PBXGroup;
+			children = (
+				4600DEC21B211FFC002E381C /* AppDelegate.swift */,
+				4600DEC41B211FFC002E381C /* ViewController.swift */,
+				4600DEC61B211FFC002E381C /* Main.storyboard */,
+				4600DEC91B211FFC002E381C /* Images.xcassets */,
+				4600DECB1B211FFC002E381C /* LaunchScreen.xib */,
+				4600DEC01B211FFC002E381C /* Supporting Files */,
+			);
+			path = Euterpe;
+			sourceTree = "<group>";
+		};
+		4600DEC01B211FFC002E381C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4600DEC11B211FFC002E381C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4600DED51B211FFC002E381C /* EuterpeTests */ = {
+			isa = PBXGroup;
+			children = (
+				4600DED81B211FFC002E381C /* EuterpeTests.swift */,
+				4600DED61B211FFC002E381C /* Supporting Files */,
+			);
+			path = EuterpeTests;
+			sourceTree = "<group>";
+		};
+		4600DED61B211FFC002E381C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4600DED71B211FFC002E381C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4600DEBC1B211FFC002E381C /* Euterpe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4600DEDC1B211FFC002E381C /* Build configuration list for PBXNativeTarget "Euterpe" */;
+			buildPhases = (
+				4600DEB91B211FFC002E381C /* Sources */,
+				4600DEBA1B211FFC002E381C /* Frameworks */,
+				4600DEBB1B211FFC002E381C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Euterpe;
+			productName = Euterpe;
+			productReference = 4600DEBD1B211FFC002E381C /* Euterpe.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4600DED11B211FFC002E381C /* EuterpeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4600DEDF1B211FFC002E381C /* Build configuration list for PBXNativeTarget "EuterpeTests" */;
+			buildPhases = (
+				4600DECE1B211FFC002E381C /* Sources */,
+				4600DECF1B211FFC002E381C /* Frameworks */,
+				4600DED01B211FFC002E381C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4600DED41B211FFC002E381C /* PBXTargetDependency */,
+			);
+			name = EuterpeTests;
+			productName = EuterpeTests;
+			productReference = 4600DED21B211FFC002E381C /* EuterpeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4600DEB51B211FFC002E381C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Andrew Breckenridge";
+				TargetAttributes = {
+					4600DEBC1B211FFC002E381C = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					4600DED11B211FFC002E381C = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = 4600DEBC1B211FFC002E381C;
+					};
+				};
+			};
+			buildConfigurationList = 4600DEB81B211FFC002E381C /* Build configuration list for PBXProject "Euterpe" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4600DEB41B211FFC002E381C;
+			productRefGroup = 4600DEBE1B211FFC002E381C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4600DEBC1B211FFC002E381C /* Euterpe */,
+				4600DED11B211FFC002E381C /* EuterpeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4600DEBB1B211FFC002E381C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4600DEC81B211FFC002E381C /* Main.storyboard in Resources */,
+				4600DECD1B211FFC002E381C /* LaunchScreen.xib in Resources */,
+				4600DECA1B211FFC002E381C /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4600DED01B211FFC002E381C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4600DEB91B211FFC002E381C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4600DEC51B211FFC002E381C /* ViewController.swift in Sources */,
+				4600DEC31B211FFC002E381C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4600DECE1B211FFC002E381C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4600DED91B211FFC002E381C /* EuterpeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4600DED41B211FFC002E381C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4600DEBC1B211FFC002E381C /* Euterpe */;
+			targetProxy = 4600DED31B211FFC002E381C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4600DEC61B211FFC002E381C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4600DEC71B211FFC002E381C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4600DECB1B211FFC002E381C /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4600DECC1B211FFC002E381C /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4600DEDA1B211FFC002E381C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4600DEDB1B211FFC002E381C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4600DEDD1B211FFC002E381C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Euterpe/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4600DEDE1B211FFC002E381C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Euterpe/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		4600DEE01B211FFC002E381C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = EuterpeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Euterpe.app/Euterpe";
+			};
+			name = Debug;
+		};
+		4600DEE11B211FFC002E381C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = EuterpeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Euterpe.app/Euterpe";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4600DEB81B211FFC002E381C /* Build configuration list for PBXProject "Euterpe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4600DEDA1B211FFC002E381C /* Debug */,
+				4600DEDB1B211FFC002E381C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4600DEDC1B211FFC002E381C /* Build configuration list for PBXNativeTarget "Euterpe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4600DEDD1B211FFC002E381C /* Debug */,
+				4600DEDE1B211FFC002E381C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4600DEDF1B211FFC002E381C /* Build configuration list for PBXNativeTarget "EuterpeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4600DEE01B211FFC002E381C /* Debug */,
+				4600DEE11B211FFC002E381C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4600DEB51B211FFC002E381C /* Project object */;
+}
