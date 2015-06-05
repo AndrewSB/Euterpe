@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreGraphics
 
 extension UIImage {
     func scale(size: CGSize) {

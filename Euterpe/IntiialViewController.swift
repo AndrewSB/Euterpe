@@ -28,8 +28,11 @@ class InitialViewController: UIViewController {
         super.viewDidLoad()
         
         OCRClient.delegate = self
-        imagePicker.delegate = self
+        OCRClient.charBlacklist = "‘''()"
+        OCRClient.engineMode = .CubeOnly
+        OCRClient.
         
+        imagePicker.delegate = self
         imagePicker.sourceType = .PhotoLibrary
     }
 }
@@ -56,6 +59,28 @@ extension InitialViewController: UINavigationControllerDelegate, UIImagePickerCo
             self.OCRClient.image = self.image
             self.OCRClient.recognize()
             println(self.OCRClient.recognizedText)
+            println("----------")
+            println(self.OCRClient.recognizedBlocksByIteratorLevel(.Block))
+            println("----------")
+            println(self.OCRClient.recognizedBlocksByIteratorLevel(G8PageIteratorLevel.Paragraph))
+            println("----------")
+            println(self.OCRClient.recognizedBlocksByIteratorLevel(G8PageIteratorLevel.Symbol))
+            println("----------")
+            println(self.OCRClient.recognizedBlocksByIteratorLevel(G8PageIteratorLevel.Textline))
+            println("----------")
+            println(self.OCRClient.recognizedBlocksByIteratorLevel(G8PageIteratorLevel.Word))
+            println("----------")
+            
+            println("\n\n\n\n\n----------")
+            var lines = [G8RecognizedBlock]()
+            for line in self.OCRClient.recognizedBlocksByIteratorLevel(.Textline) {
+                lines.append(line as! G8RecognizedBlock)
+            }
+            
+            lines[0].description
+            
+            println(lines.sorted({ $0.confidence > $1.confidence }).map({ "\($0.text)" })[0...2])
+            self.image = self.OCRClient.thresholdedImage
         })
     }
     
