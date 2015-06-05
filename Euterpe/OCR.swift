@@ -12,30 +12,44 @@ import TesseractOCR
 class OCR {
     var type: Services
     var image: UIImage
-    var engines: [OCREngine]
-    var confidence: (Double, Double) = (0, 0)
+    var engines: [OCREngine]!
+    var confidence: (Double?, Double?) = (0, 0)
     
-    init(type: Services, image: UIImage) {
+    init(type: Services, image: UIImage, screenSize: CGSize) {
         self.type = type
         self.image = image
-        self.engines = [OCREngine(image: image, boundingRect: type.boundingRect), OCREngine(image: image.colorInverted(), boundingRect: type.boundingRect)]
+        let selectionRect = CGRect(x: screenSize.width * type.x, y: screenSize.height * type.y,
+            width: screenSize.width * type.width, height: screenSize.height * type.height)
         
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
+        //http://studyswift.blogspot.com/2014/11/cifilter-invert-photo-color.html
+        let ciPictureSelected = CIImage(image: image)
+        var myFilter = CIFilter(name: "CIColorInvert")
+        myFilter.setValue(ciPictureSelected, forKey: kCIInputImageKey)
+        let ciOutputImage = myFilter.outputImage
+        let ciContext = CIContext(options:[kCIContextUseSoftwareRenderer: true])
+        let cgOutputImage = ciContext.createCGImage(ciOutputImage, fromRect: ciOutputImage.extent())
+        let invertedImage = UIImage(CGImage: cgOutputImage, scale: 1, orientation: .Up)!
+        
+        
+        self.engines = [OCREngine(image: image, boundingRect: selectionRect), OCREngine(image: invertedImage, boundingRect: selectionRect)]
+        
+        dispatch_sync(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
             self.engines[0].recognize()
-            self.confidence.0 = self.engines[0].confidence!
+            println(self.engines[0].recognizedBlocksByIteratorLevel(.Textline))
         })
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
+        dispatch_sync(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
             self.engines[1].recognize()
-            self.confidence.1 = self.engines[1].confidence!
+            println(self.engines[0].recognizedBlocksByIteratorLevel(.Textline))
         })
+        
+        
+        self.engines = nil
     }
 }
 
 class OCREngine: G8Tesseract {
-    var confidence: Double?
-    
     init(image: UIImage, boundingRect: CGRect) {
-        super.init(language: "en", configDictionary: nil, configFileNames: nil, absoluteDataPath: nil, engineMode: G8OCREngineMode.TesseractCubeCombined, copyFilesFromResources: false)
+        super.init(language: "eng", configDictionary: nil, configFileNames: nil, absoluteDataPath: nil, engineMode: G8OCREngineMode.TesseractCubeCombined, copyFilesFromResources: false)
         
         super.image = image
         super.rect = boundingRect

@@ -15,16 +15,15 @@ extension UIImage {
         return self
     }
     
-    func colorInverted() -> UIImage {
-        let cIImage =  lolXcodeSux(CGImage: self.CGImage)
-        var invertFilter = CIFilter(name: "CIColorInvert")
-        cIImage.setValue(invertFilter, forKey: kCIInputImageKey)
+     func shrinkTo(height: CGFloat) -> UIImage {
+        println(self.size)
+        let newWidth = (height / self.size.height) * self.size.width
         
-        let cIOutputImage = invertFilter.outputImage
+        UIGraphicsBeginImageContext(CGSize(width: newWidth, height: height))
+        self.drawInRect(CGRect(x: 0, y: 0, width: newWidth, height: height))
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
         
-        let ciContext = CIContext(options:[kCIContextUseSoftwareRenderer: true])
-        let cgOutputImage = ciContext.createCGImage(cIOutputImage, fromRect: cIOutputImage.extent())
-        
-        return UIImage(CGImage: cgOutputImage, scale: 1, orientation: .Up)!
+        return newImage
     }
 }

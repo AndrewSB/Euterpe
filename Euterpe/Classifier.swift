@@ -11,11 +11,9 @@ import TesseractOCR
 
 class Classifier {
     var original: UIImage {didSet{ self.classify() }}
-    var inverted: UIImage
         
     init(image: UIImage) {
         original = image
-        inverted = original.colorInverted()
     }
     
     func classify() {

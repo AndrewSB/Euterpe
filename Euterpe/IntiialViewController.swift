@@ -18,10 +18,10 @@ class InitialViewController: UIViewController {
     var image: UIImage! {
         didSet {
             rollImageView.image = image
-            OCRDaemon = [OCR(type: .Pandora, image: image),
-                         OCR(type: .Soundcloud, image: image),
-                         OCR(type: .Spotify, image: image),
-                         OCR(type: .Music, image: image),]
+            OCRDaemon = [OCR(type: .Pandora, image: image, screenSize: view.frame.size),
+                         OCR(type: .Soundcloud, image: image, screenSize: view.frame.size),
+                         OCR(type: .Spotify, image: image, screenSize: view.frame.size),
+                         OCR(type: .Music, image: image, screenSize: view.frame.size)]
             println("here")
         }
     }
@@ -35,6 +35,16 @@ class InitialViewController: UIViewController {
         imagePicker.sourceType = .PhotoLibrary
         
         rollImageView.contentMode = .ScaleAspectFit
+        
+        let screenSize = self.view.frame.size
+        let type = Services.Pandora
+        
+        let greenView = UIView(frame: CGRect(x: screenSize.width * type.x, y: screenSize.height * type.y,
+            width: screenSize.width * type.width, height: screenSize.height * type.height))
+        greenView.backgroundColor = UIColor.greenColor()
+        
+        view.addSubview(greenView)
+
     }
 }
 
@@ -48,7 +58,7 @@ extension InitialViewController {
 extension InitialViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            self.image = pickedImage
+            self.image = pickedImage.shrinkTo(view.frame.height)
         }
         
         dismissViewControllerAnimated(true, completion: nil)
