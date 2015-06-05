@@ -24,6 +24,8 @@
 		46E3D8D91B21697D001E0622 /* MusicServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E3D8D81B21697D001E0622 /* MusicServices.swift */; };
 		46E3D8DB1B21970E001E0622 /* OCR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E3D8DA1B21970E001E0622 /* OCR.swift */; };
 		46E3D8DD1B21ADDF001E0622 /* NSUserdefaultStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E3D8DC1B21ADDF001E0622 /* NSUserdefaultStore.swift */; };
+		46E3D8F81B21CB56001E0622 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E3D8F61B21CB56001E0622 /* Alamofire.framework */; };
+		46E3D8F91B21CB56001E0622 /* XCDYouTubeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E3D8F71B21CB56001E0622 /* XCDYouTubeKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,9 @@
 		46E3D8D81B21697D001E0622 /* MusicServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicServices.swift; sourceTree = "<group>"; };
 		46E3D8DA1B21970E001E0622 /* OCR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCR.swift; sourceTree = "<group>"; };
 		46E3D8DC1B21ADDF001E0622 /* NSUserdefaultStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSUserdefaultStore.swift; sourceTree = "<group>"; };
+		46E3D8F41B21CA71001E0622 /* Euterpe-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Euterpe-Bridging-Header.h"; sourceTree = "<group>"; };
+		46E3D8F61B21CB56001E0622 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		46E3D8F71B21CB56001E0622 /* XCDYouTubeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCDYouTubeKit.framework; path = Carthage/Build/iOS/XCDYouTubeKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +65,8 @@
 				4600DEEF1B213423002E381C /* libstdc++.6.0.9.dylib in Frameworks */,
 				4600DEED1B2133F4002E381C /* CoreImage.framework in Frameworks */,
 				4600DEE71B213098002E381C /* TesseractOCR.framework in Frameworks */,
+				46E3D8F91B21CB56001E0622 /* XCDYouTubeKit.framework in Frameworks */,
+				46E3D8F81B21CB56001E0622 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,8 +95,6 @@
 			children = (
 				4600DEC21B211FFC002E381C /* AppDelegate.swift */,
 				4600DEE31B212211002E381C /* IntiialViewController.swift */,
-				46E3D8DA1B21970E001E0622 /* OCR.swift */,
-				46E3D8D81B21697D001E0622 /* MusicServices.swift */,
 				4600DEC61B211FFC002E381C /* Main.storyboard */,
 				4600DEC91B211FFC002E381C /* Images.xcassets */,
 				4600DEC01B211FFC002E381C /* Supporting Files */,
@@ -101,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				4600DECB1B211FFC002E381C /* LaunchScreen.xib */,
+				46E3D8F41B21CA71001E0622 /* Euterpe-Bridging-Header.h */,
 				4600DEC11B211FFC002E381C /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -109,8 +115,8 @@
 		4600DEE81B21309D002E381C /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				46E3D8D11B215836001E0622 /* UIImageExtension.swift */,
-				46E3D8DC1B21ADDF001E0622 /* NSUserdefaultStore.swift */,
+				46E3D8E01B21C8AE001E0622 /* OCR */,
+				46E3D8E11B21C8B4001E0622 /* Extensions */,
 				4600DEE91B2130A5002E381C /* Frameworks */,
 			);
 			name = Library;
@@ -119,6 +125,8 @@
 		4600DEE91B2130A5002E381C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				46E3D8F61B21CB56001E0622 /* Alamofire.framework */,
+				46E3D8F71B21CB56001E0622 /* XCDYouTubeKit.framework */,
 				4600DEF71B21344D002E381C /* Tesseract */,
 			);
 			name = Frameworks;
@@ -145,6 +153,25 @@
 				4600DEE61B213098002E381C /* TesseractOCR.framework */,
 			);
 			name = Tesseract;
+			sourceTree = "<group>";
+		};
+		46E3D8E01B21C8AE001E0622 /* OCR */ = {
+			isa = PBXGroup;
+			children = (
+				46E3D8DA1B21970E001E0622 /* OCR.swift */,
+				46E3D8D81B21697D001E0622 /* MusicServices.swift */,
+			);
+			name = OCR;
+			path = Euterpe;
+			sourceTree = "<group>";
+		};
+		46E3D8E11B21C8B4001E0622 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				46E3D8D11B215836001E0622 /* UIImageExtension.swift */,
+				46E3D8DC1B21ADDF001E0622 /* NSUserdefaultStore.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,15 +362,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				GENERATE_MASTER_OBJECT_FILE = YES;
 				INFOPLIST_FILE = Euterpe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Euterpe/Euterpe-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -351,15 +382,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				GENERATE_MASTER_OBJECT_FILE = YES;
 				INFOPLIST_FILE = Euterpe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Euterpe/Euterpe-Bridging-Header.h";
 			};
 			name = Release;
 		};

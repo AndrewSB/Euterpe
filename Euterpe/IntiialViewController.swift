@@ -7,8 +7,9 @@
 //
 
 import UIKit
-import AssetsLibrary
 import Photos
+import Alamofire
+import XCDYouTubeKit
 
 class InitialViewController: UIViewController {
     let imagePicker = UIImagePickerController()
@@ -23,7 +24,20 @@ class InitialViewController: UIViewController {
                          OCR(type: .Spotify, image: image, screenSize: view.frame.size),
                          OCR(type: .Music, image: image, screenSize: view.frame.size)]
             println("decided on \(UserStore.type). Search term is \(UserStore.term) with a confidence of \(UserStore.confidence)")
+            
+            Alamofire.request(.GET,"\(PUBLIC_URL)/vtcver.php")
+                     .responseJSON { (_,_, JSON, _) in
+                        let courseName = jsonResult[0]["courseName"]
+                        let courseVersion = jsonResult[0]["courseVersion"]
+                        let courseZipFile = jsonResult[0]["courseZipFile"]
+                        
+                        println("JSON:    courseName: \(courseName)")
+                        println("JSON: courseVersion: \(courseVersion)")
+                        println("JSON: courseZipFile: \(courseZipFile)")
+
+            }
         }
+        
     }
 
     @IBOutlet weak var rollImageView: UIImageView!
