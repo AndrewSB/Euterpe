@@ -64,7 +64,7 @@ class UserStore {
         case .Pandora:
             for line in lines {
                 if let line = line as? G8RecognizedBlock {
-                    if line.confidence > 0.5 {
+                    if line.confidence > 0.5 && count(line.text) > 4 {
                         text += "\(line.text) "
                         normalizedConfidence += Double(line.confidence)
                     }
