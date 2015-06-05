@@ -20,6 +20,7 @@
 		4600DEF31B213431002E381C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4600DEF21B213431002E381C /* CoreGraphics.framework */; };
 		4600DEF51B213437002E381C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4600DEF41B213437002E381C /* UIKit.framework */; };
 		4600DEF91B213523002E381C /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4600DEF81B213523002E381C /* libc++.dylib */; };
+		46E3D8D21B215836001E0622 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E3D8D11B215836001E0622 /* UIImageExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		4600DEF21B213431002E381C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		4600DEF41B213437002E381C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4600DEF81B213523002E381C /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		46E3D8D11B215836001E0622 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		4600DEE81B21309D002E381C /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				46E3D8D11B215836001E0622 /* UIImageExtension.swift */,
 				4600DEE91B2130A5002E381C /* Frameworks */,
 			);
 			name = Library;
@@ -166,6 +169,7 @@
 				TargetAttributes = {
 					4600DEBC1B211FFC002E381C = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = 2Z475Y2H59;
 					};
 				};
 			};
@@ -208,6 +212,7 @@
 			files = (
 				4600DEC31B211FFC002E381C /* AppDelegate.swift in Sources */,
 				4600DEE41B212211002E381C /* IntiialViewController.swift in Sources */,
+				46E3D8D21B215836001E0622 /* UIImageExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,10 +323,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
+				GENERATE_MASTER_OBJECT_FILE = YES;
 				INFOPLIST_FILE = Euterpe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -332,10 +339,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
+				GENERATE_MASTER_OBJECT_FILE = YES;
 				INFOPLIST_FILE = Euterpe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -361,6 +370,7 @@
 				4600DEDE1B211FFC002E381C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
