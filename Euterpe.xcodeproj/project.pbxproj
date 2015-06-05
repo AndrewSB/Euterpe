@@ -11,7 +11,15 @@
 		4600DEC81B211FFC002E381C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4600DEC61B211FFC002E381C /* Main.storyboard */; };
 		4600DECA1B211FFC002E381C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4600DEC91B211FFC002E381C /* Images.xcassets */; };
 		4600DECD1B211FFC002E381C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4600DECB1B211FFC002E381C /* LaunchScreen.xib */; };
-		4600DEE41B212211002E381C /* IntialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4600DEE31B212211002E381C /* IntialViewController.swift */; };
+		4600DEE41B212211002E381C /* IntiialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4600DEE31B212211002E381C /* IntiialViewController.swift */; };
+		4600DEE71B213098002E381C /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4600DEE61B213098002E381C /* TesseractOCR.framework */; };
+		4600DEEB1B213258002E381C /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 4600DEEA1B213258002E381C /* tessdata */; };
+		4600DEED1B2133F4002E381C /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4600DEEC1B2133F4002E381C /* CoreImage.framework */; };
+		4600DEEF1B213423002E381C /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4600DEEE1B213423002E381C /* libstdc++.6.0.9.dylib */; };
+		4600DEF11B213429002E381C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4600DEF01B213429002E381C /* Foundation.framework */; };
+		4600DEF31B213431002E381C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4600DEF21B213431002E381C /* CoreGraphics.framework */; };
+		4600DEF51B213437002E381C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4600DEF41B213437002E381C /* UIKit.framework */; };
+		4600DEF91B213523002E381C /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4600DEF81B213523002E381C /* libc++.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,7 +29,15 @@
 		4600DEC71B211FFC002E381C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4600DEC91B211FFC002E381C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4600DECC1B211FFC002E381C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		4600DEE31B212211002E381C /* IntialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntialViewController.swift; sourceTree = "<group>"; };
+		4600DEE31B212211002E381C /* IntiialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntiialViewController.swift; sourceTree = "<group>"; };
+		4600DEE61B213098002E381C /* TesseractOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TesseractOCR.framework; path = Carthage/Build/iOS/TesseractOCR.framework; sourceTree = "<group>"; };
+		4600DEEA1B213258002E381C /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
+		4600DEEC1B2133F4002E381C /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		4600DEEE1B213423002E381C /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
+		4600DEF01B213429002E381C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4600DEF21B213431002E381C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4600DEF41B213437002E381C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4600DEF81B213523002E381C /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +45,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4600DEF91B213523002E381C /* libc++.dylib in Frameworks */,
+				4600DEF51B213437002E381C /* UIKit.framework in Frameworks */,
+				4600DEF31B213431002E381C /* CoreGraphics.framework in Frameworks */,
+				4600DEF11B213429002E381C /* Foundation.framework in Frameworks */,
+				4600DEEF1B213423002E381C /* libstdc++.6.0.9.dylib in Frameworks */,
+				4600DEED1B2133F4002E381C /* CoreImage.framework in Frameworks */,
+				4600DEE71B213098002E381C /* TesseractOCR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				4600DEBF1B211FFC002E381C /* Euterpe */,
+				4600DEE81B21309D002E381C /* Library */,
 				4600DEBE1B211FFC002E381C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,8 +79,9 @@
 			isa = PBXGroup;
 			children = (
 				4600DEC21B211FFC002E381C /* AppDelegate.swift */,
-				4600DEE31B212211002E381C /* IntialViewController.swift */,
+				4600DEE31B212211002E381C /* IntiialViewController.swift */,
 				4600DEC61B211FFC002E381C /* Main.storyboard */,
+				4600DEC91B211FFC002E381C /* Images.xcassets */,
 				4600DEC01B211FFC002E381C /* Supporting Files */,
 			);
 			path = Euterpe;
@@ -65,19 +90,49 @@
 		4600DEC01B211FFC002E381C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				4600DEE21B21219F002E381C /* Resources */,
 				4600DECB1B211FFC002E381C /* LaunchScreen.xib */,
 				4600DEC11B211FFC002E381C /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		4600DEE21B21219F002E381C /* Resources */ = {
+		4600DEE81B21309D002E381C /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				4600DEC91B211FFC002E381C /* Images.xcassets */,
+				4600DEE91B2130A5002E381C /* Frameworks */,
 			);
-			name = Resources;
+			name = Library;
+			sourceTree = "<group>";
+		};
+		4600DEE91B2130A5002E381C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4600DEF71B21344D002E381C /* Tesseract */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4600DEF61B21343F002E381C /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				4600DEF81B213523002E381C /* libc++.dylib */,
+				4600DEF41B213437002E381C /* UIKit.framework */,
+				4600DEF21B213431002E381C /* CoreGraphics.framework */,
+				4600DEF01B213429002E381C /* Foundation.framework */,
+				4600DEEE1B213423002E381C /* libstdc++.6.0.9.dylib */,
+				4600DEEC1B2133F4002E381C /* CoreImage.framework */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		4600DEF71B21344D002E381C /* Tesseract */ = {
+			isa = PBXGroup;
+			children = (
+				4600DEF61B21343F002E381C /* Dependencies */,
+				4600DEEA1B213258002E381C /* tessdata */,
+				4600DEE61B213098002E381C /* TesseractOCR.framework */,
+			);
+			name = Tesseract;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4600DEC81B211FFC002E381C /* Main.storyboard in Resources */,
+				4600DEEB1B213258002E381C /* tessdata in Resources */,
 				4600DECD1B211FFC002E381C /* LaunchScreen.xib in Resources */,
 				4600DECA1B211FFC002E381C /* Images.xcassets in Resources */,
 			);
@@ -151,7 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4600DEC31B211FFC002E381C /* AppDelegate.swift in Sources */,
-				4600DEE41B212211002E381C /* IntialViewController.swift in Sources */,
+				4600DEE41B212211002E381C /* IntiialViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +318,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Euterpe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -272,6 +332,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Euterpe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
