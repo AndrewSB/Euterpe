@@ -10,13 +10,24 @@ import UIKit
 import TesseractOCR
 
 class Classifier {
-    var original: UIImage
+    var original: UIImage {didSet{ self.classify() }}
     var inverted: UIImage
-    
-    
-    
+        
     init(image: UIImage) {
         original = image
         inverted = original.colorInverted()
+    }
+    
+    func classify() {
+        let oCRClients: [G8Tesseract] = [G8Tesseract(language: "en", engineMode: .TesseractCubeCombined),G8Tesseract(language: "en", engineMode: .TesseractCubeCombined),G8Tesseract(language: "en", engineMode: .TesseractCubeCombined),G8Tesseract(language: "en", engineMode: .TesseractCubeCombined)]
+        
+        for (index, element) in enumerate(oCRClients) {
+            element.charBlacklist =  "‘''()"
+            element.image = self.original
+        
+            
+        }
+        
+        
     }
 }
