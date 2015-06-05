@@ -7,14 +7,24 @@
 //
 
 import UIKit
-import CoreGraphics
+
+typealias lolXcodeSux = CIImage // Xcode has a compiler bug with CIImage's in extensions
 
 extension UIImage {
-    func scale(size: CGSize) {
-        
-    }
-    
     func fixOrientation() -> UIImage {
         return self
+    }
+    
+    func colorInverted() -> UIImage {
+        let cIImage =  lolXcodeSux(CGImage: self.CGImage)
+        var invertFilter = CIFilter(name: "CIColorInvert")
+        cIImage.setValue(invertFilter, forKey: kCIInputImageKey)
+        
+        let cIOutputImage = invertFilter.outputImage
+        
+        let ciContext = CIContext(options:[kCIContextUseSoftwareRenderer: true])
+        let cgOutputImage = ciContext.createCGImage(cIOutputImage, fromRect: cIOutputImage.extent())
+        
+        return UIImage(CGImage: cgOutputImage, scale: 1, orientation: .Up)!
     }
 }

@@ -11,7 +11,6 @@ import TesseractOCR
 import AssetsLibrary
 import Photos
 
-
 class InitialViewController: UIViewController {
     let OCRClient = G8Tesseract(language: "eng")
     var imageIndex = 0
@@ -30,10 +29,19 @@ class InitialViewController: UIViewController {
         OCRClient.delegate = self
         OCRClient.charBlacklist = "‘''()"
         OCRClient.engineMode = .CubeOnly
-        OCRClient.
         
         imagePicker.delegate = self
         imagePicker.sourceType = .PhotoLibrary
+        
+        
+        let w = self.view.frame.width
+        let h = self.view.frame.height
+        
+        let fwyView = UIView(frame: CGRect(x: 0.02 * w, y: 0.07 * h, width: 0.92*w, height: 0.18*h))
+        fwyView.backgroundColor = UIColor.redColor()
+        fwyView.alpha = 0.5
+        
+        [fwyView].map({ self.view.addSubview($0) })
     }
 }
 
@@ -51,7 +59,10 @@ extension InitialViewController: UINavigationControllerDelegate, UIImagePickerCo
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             rollImageView.contentMode = .ScaleAspectFit
-            self.image = pickedImage
+
+            
+            
+            self.image = pickedImage.colorInverted()
         }
         
         dismissViewControllerAnimated(true, completion: {
@@ -79,7 +90,7 @@ extension InitialViewController: UINavigationControllerDelegate, UIImagePickerCo
             
             lines[0].description
             
-            println(lines.sorted({ $0.confidence > $1.confidence }).map({ "\($0.text)" })[0...2])
+            println(lines.sorted({ $0.confidence > $1.confidence }).map({ "\($0.text) \($0.boundingBoxAtImageOfSize(self.view.frame.size))" })[0...2])
             self.image = self.OCRClient.thresholdedImage
         })
     }
@@ -87,4 +98,18 @@ extension InitialViewController: UINavigationControllerDelegate, UIImagePickerCo
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    func colorInverted(image: UIImage) -> UIImage {
+        let cIImage =  CIImage(CGImage: image.CGImage)
+        var invertFilter = CIFilter(name: "CIColorInvert")
+        cIImage.setValue(invertFilter, forKey: kCIInputImageKey)
+        
+        let cIOutputImage = invertFilter.outputImage
+        
+        let ciContext = CIContext(options:[kCIContextUseSoftwareRenderer: true])
+        let cgOutputImage = ciContext.createCGImage(cIOutputImage, fromRect: cIOutputImage.extent())
+        
+        return UIImage(CGImage: cgOutputImage, scale: 1, orientation: .Up)!
+    }
+
 }
