@@ -9,7 +9,6 @@ get '/' do
 	"also, you can POST to /video with a q=\"SEARCH TERM\" and my dope self will return the first youtube id",
 	"stay dope",
 	"DOPE"].join("<br/><br/>")
-
 end
 
 post '/video' do 

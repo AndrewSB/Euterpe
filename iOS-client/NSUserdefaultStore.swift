@@ -13,6 +13,16 @@ let set = NSUserDefaults.standardUserDefaults().setObject
 let get = NSUserDefaults.standardUserDefaults().objectForKey
 
 class UserStore {
+    class var showAudioView: Bool {
+        get {
+            return get("showAudioView") as! Bool
+        }
+        set {
+            set(newValue, forKey: "showAudioView")
+        }
+    }
+    
+    
     class var confidence: Double? {
         get {
             return get("confidence") as? Double
@@ -60,7 +70,7 @@ class UserStore {
                     }
                 }
             }
-            normalizedConfidence += 1
+            normalizedConfidence -= lines.count < 3 ? 100 : -100
         case .Soundcloud:
             for line in lines {
                 if let line = line as? G8RecognizedBlock {

@@ -20,13 +20,32 @@
 		4600DEF31B213431002E381C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4600DEF21B213431002E381C /* CoreGraphics.framework */; };
 		4600DEF51B213437002E381C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4600DEF41B213437002E381C /* UIKit.framework */; };
 		4600DEF91B213523002E381C /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4600DEF81B213523002E381C /* libc++.dylib */; };
+		46CA7A671B22608C00D175C5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CA7A661B22608C00D175C5 /* SettingsViewController.swift */; };
 		46E3D8D21B215836001E0622 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E3D8D11B215836001E0622 /* UIImageExtension.swift */; };
 		46E3D8D91B21697D001E0622 /* MusicServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E3D8D81B21697D001E0622 /* MusicServices.swift */; };
 		46E3D8DB1B21970E001E0622 /* OCR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E3D8DA1B21970E001E0622 /* OCR.swift */; };
 		46E3D8DD1B21ADDF001E0622 /* NSUserdefaultStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E3D8DC1B21ADDF001E0622 /* NSUserdefaultStore.swift */; };
 		46E3D8F81B21CB56001E0622 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E3D8F61B21CB56001E0622 /* Alamofire.framework */; };
 		46E3D8F91B21CB56001E0622 /* XCDYouTubeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E3D8F71B21CB56001E0622 /* XCDYouTubeKit.framework */; };
+		46E3D8FA1B21FE2B001E0622 /* XCDYouTubeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E3D8F71B21CB56001E0622 /* XCDYouTubeKit.framework */; };
+		46E3D8FB1B21FE2B001E0622 /* XCDYouTubeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 46E3D8F71B21CB56001E0622 /* XCDYouTubeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		46E3D8FE1B21FE3C001E0622 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 46E3D8F61B21CB56001E0622 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		46E3D8FC1B21FE2B001E0622 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				46E3D8FB1B21FE2B001E0622 /* XCDYouTubeKit.framework in Embed Frameworks */,
+				46E3D8FE1B21FE3C001E0622 /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4600DEBD1B211FFC002E381C /* Euterpe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Euterpe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,11 +63,11 @@
 		4600DEF21B213431002E381C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		4600DEF41B213437002E381C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4600DEF81B213523002E381C /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		46CA7A661B22608C00D175C5 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		46E3D8D11B215836001E0622 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		46E3D8D81B21697D001E0622 /* MusicServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicServices.swift; sourceTree = "<group>"; };
 		46E3D8DA1B21970E001E0622 /* OCR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCR.swift; sourceTree = "<group>"; };
 		46E3D8DC1B21ADDF001E0622 /* NSUserdefaultStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSUserdefaultStore.swift; sourceTree = "<group>"; };
-		46E3D8F41B21CA71001E0622 /* Euterpe-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Euterpe-Bridging-Header.h"; sourceTree = "<group>"; };
 		46E3D8F61B21CB56001E0622 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		46E3D8F71B21CB56001E0622 /* XCDYouTubeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCDYouTubeKit.framework; path = Carthage/Build/iOS/XCDYouTubeKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -59,6 +78,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4600DEF91B213523002E381C /* libc++.dylib in Frameworks */,
+				46E3D8FA1B21FE2B001E0622 /* XCDYouTubeKit.framework in Frameworks */,
 				4600DEF51B213437002E381C /* UIKit.framework in Frameworks */,
 				4600DEF31B213431002E381C /* CoreGraphics.framework in Frameworks */,
 				4600DEF11B213429002E381C /* Foundation.framework in Frameworks */,
@@ -95,6 +115,7 @@
 			children = (
 				4600DEC21B211FFC002E381C /* AppDelegate.swift */,
 				4600DEE31B212211002E381C /* IntiialViewController.swift */,
+				46CA7A661B22608C00D175C5 /* SettingsViewController.swift */,
 				4600DEC61B211FFC002E381C /* Main.storyboard */,
 				4600DEC91B211FFC002E381C /* Images.xcassets */,
 				4600DEC01B211FFC002E381C /* Supporting Files */,
@@ -106,7 +127,6 @@
 			isa = PBXGroup;
 			children = (
 				4600DECB1B211FFC002E381C /* LaunchScreen.xib */,
-				46E3D8F41B21CA71001E0622 /* Euterpe-Bridging-Header.h */,
 				4600DEC11B211FFC002E381C /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -184,6 +204,7 @@
 				4600DEB91B211FFC002E381C /* Sources */,
 				4600DEBA1B211FFC002E381C /* Frameworks */,
 				4600DEBB1B211FFC002E381C /* Resources */,
+				46E3D8FC1B21FE2B001E0622 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -248,6 +269,7 @@
 			files = (
 				46E3D8DB1B21970E001E0622 /* OCR.swift in Sources */,
 				46E3D8D91B21697D001E0622 /* MusicServices.swift in Sources */,
+				46CA7A671B22608C00D175C5 /* SettingsViewController.swift in Sources */,
 				4600DEC31B211FFC002E381C /* AppDelegate.swift in Sources */,
 				46E3D8DD1B21ADDF001E0622 /* NSUserdefaultStore.swift in Sources */,
 				4600DEE41B212211002E381C /* IntiialViewController.swift in Sources */,
@@ -373,7 +395,7 @@
 				INFOPLIST_FILE = Euterpe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Euterpe/Euterpe-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -393,7 +415,7 @@
 				INFOPLIST_FILE = Euterpe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Euterpe/Euterpe-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};
